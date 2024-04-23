@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20240423 17:04:02.253" rpa="false" schemaversion="4">
+<suite id="s1" name="Menu Division" source="c:\Users\Sprint User\Documents\dev-konnekrevamp\Test_Suite_KonnekRevamp\menu_division.robot">
+<test id="s1-t1" name="TC_Create New Division" line="12">
+<kw name="Open browser Staging" library="steps">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20240423 17:04:02.773" endtime="20240423 17:04:02.773"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240423 17:04:02.773" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20240423 17:04:02.773" endtime="20240423 17:04:05.342"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240423 17:04:05.342" endtime="20240423 17:04:05.585"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_konnek_revamp}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240423 17:04:05.587" level="INFO">Opening url 'https://stgrvm.wekonnek.id/auth/signin'</msg>
+<status status="PASS" starttime="20240423 17:04:05.585" endtime="20240423 17:04:35.699"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:36.869" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-743.png"&gt;&lt;img src="selenium-screenshot-743.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:36.869" level="FAIL">Page should have contained element 'xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:35.699" endtime="20240423 17:04:36.876"/>
+</kw>
+<msg timestamp="20240423 17:04:36.876" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:35.699" endtime="20240423 17:04:36.876"/>
+</kw>
+<while condition="${Reload} != ${TRUE}">
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:38.006" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-744.png"&gt;&lt;img src="selenium-screenshot-744.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:38.006" level="FAIL">Page should have contained element 'xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:36.881" endtime="20240423 17:04:38.006"/>
+</kw>
+<msg timestamp="20240423 17:04:38.011" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:36.881" endtime="20240423 17:04:38.011"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:36.881" endtime="20240423 17:04:38.011"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:39.185" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-745.png"&gt;&lt;img src="selenium-screenshot-745.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:39.185" level="FAIL">Page should have contained element 'xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:38.011" endtime="20240423 17:04:39.189"/>
+</kw>
+<msg timestamp="20240423 17:04:39.189" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:38.011" endtime="20240423 17:04:39.189"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:38.011" endtime="20240423 17:04:39.189"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:40.649" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-746.png"&gt;&lt;img src="selenium-screenshot-746.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:40.649" level="FAIL">Page should have contained element 'xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:39.194" endtime="20240423 17:04:40.649"/>
+</kw>
+<msg timestamp="20240423 17:04:40.649" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:39.194" endtime="20240423 17:04:40.649"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:39.194" endtime="20240423 17:04:40.649"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:40.877" level="INFO">Current page contains element 'xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']'.</msg>
+<status status="PASS" starttime="20240423 17:04:40.654" endtime="20240423 17:04:40.877"/>
+</kw>
+<msg timestamp="20240423 17:04:40.877" level="INFO">${Reload} = True</msg>
+<status status="PASS" starttime="20240423 17:04:40.654" endtime="20240423 17:04:40.877"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:40.654" endtime="20240423 17:04:40.877"/>
+</iter>
+<status status="PASS" starttime="20240423 17:04:36.881" endtime="20240423 17:04:40.879"/>
+</while>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240423 17:04:41.398" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-747.png"&gt;&lt;img src="selenium-screenshot-747.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240423 17:04:40.879" endtime="20240423 17:04:41.398"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Konnek by Sprint Asia Technology</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240423 17:04:41.924" level="INFO">Current page contains text 'Konnek by Sprint Asia Technology'.</msg>
+<status status="PASS" starttime="20240423 17:04:41.403" endtime="20240423 17:04:41.924"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240423 17:04:42.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-748.png"&gt;&lt;img src="selenium-screenshot-748.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240423 17:04:41.924" endtime="20240423 17:04:42.497"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:02.768" endtime="20240423 17:04:42.502"/>
+</kw>
+<kw name="Input Company ID, Email, Password" library="steps">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=/html//input[@id='companyId']</arg>
+<arg>companystg</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 17:04:42.507" level="INFO">Typing text 'companystg' into text field 'xpath=/html//input[@id='companyId']'.</msg>
+<status status="PASS" starttime="20240423 17:04:42.502" endtime="20240423 17:04:43.687"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=/html//input[@id='username']</arg>
+<arg>adminrabil_stg@harakirimail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 17:04:43.687" level="INFO">Typing text 'adminrabil_stg@harakirimail.com' into text field 'xpath=/html//input[@id='username']'.</msg>
+<status status="PASS" starttime="20240423 17:04:43.687" endtime="20240423 17:04:44.980"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=/html//input[@id='password']</arg>
+<arg>@Muhammad123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240423 17:04:44.980" level="INFO">Typing password into text field 'xpath=/html//input[@id='password']'.</msg>
+<msg timestamp="20240423 17:04:45.448" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240423 17:04:45.910" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240423 17:04:44.980" endtime="20240423 17:04:45.910"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240423 17:04:46.523" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-749.png"&gt;&lt;img src="selenium-screenshot-749.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240423 17:04:45.910" endtime="20240423 17:04:46.523"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:42.502" endtime="20240423 17:04:46.523"/>
+</kw>
+<kw name="Klik Button Login" library="steps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 17:04:46.528" level="INFO">Clicking element 'xpath=/html//div[@id='root']/div/div/div[@class='col']//section[@class='ant-layout']//div[@class='col-4']/div//form[@class='ant-form ant-form-horizontal']//button[@type='primary']'.</msg>
+<status status="PASS" starttime="20240423 17:04:46.528" endtime="20240423 17:04:47.057"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:49.040" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-750.png"&gt;&lt;img src="selenium-screenshot-750.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:49.040" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:47.057" endtime="20240423 17:04:49.045"/>
+</kw>
+<msg timestamp="20240423 17:04:49.045" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:47.057" endtime="20240423 17:04:49.045"/>
+</kw>
+<while condition="${Reload} != ${TRUE}">
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:50.500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-751.png"&gt;&lt;img src="selenium-screenshot-751.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:50.500" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:49.045" endtime="20240423 17:04:50.504"/>
+</kw>
+<msg timestamp="20240423 17:04:50.505" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:49.045" endtime="20240423 17:04:50.505"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:49.045" endtime="20240423 17:04:50.505"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:51.775" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-752.png"&gt;&lt;img src="selenium-screenshot-752.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:51.775" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:50.509" endtime="20240423 17:04:51.779"/>
+</kw>
+<msg timestamp="20240423 17:04:51.779" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:50.509" endtime="20240423 17:04:51.779"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:50.505" endtime="20240423 17:04:51.779"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:53.004" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-753.png"&gt;&lt;img src="selenium-screenshot-753.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:53.004" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:51.784" endtime="20240423 17:04:53.009"/>
+</kw>
+<msg timestamp="20240423 17:04:53.009" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:51.784" endtime="20240423 17:04:53.009"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:51.779" endtime="20240423 17:04:53.009"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:54.365" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-754.png"&gt;&lt;img src="selenium-screenshot-754.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:54.369" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:53.014" endtime="20240423 17:04:54.369"/>
+</kw>
+<msg timestamp="20240423 17:04:54.369" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:53.009" endtime="20240423 17:04:54.374"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:53.009" endtime="20240423 17:04:54.374"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:55.715" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-755.png"&gt;&lt;img src="selenium-screenshot-755.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:55.715" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:54.374" endtime="20240423 17:04:55.719"/>
+</kw>
+<msg timestamp="20240423 17:04:55.719" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:54.374" endtime="20240423 17:04:55.719"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:54.374" endtime="20240423 17:04:55.719"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:57.454" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-756.png"&gt;&lt;img src="selenium-screenshot-756.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:57.454" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:55.724" endtime="20240423 17:04:57.459"/>
+</kw>
+<msg timestamp="20240423 17:04:57.459" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:55.724" endtime="20240423 17:04:57.459"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:55.719" endtime="20240423 17:04:57.459"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:04:59.019" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-757.png"&gt;&lt;img src="selenium-screenshot-757.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:04:59.019" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:57.464" endtime="20240423 17:04:59.019"/>
+</kw>
+<msg timestamp="20240423 17:04:59.024" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:57.459" endtime="20240423 17:04:59.024"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:57.459" endtime="20240423 17:04:59.024"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:05:00.549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-758.png"&gt;&lt;img src="selenium-screenshot-758.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:05:00.549" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:04:59.024" endtime="20240423 17:05:00.549"/>
+</kw>
+<msg timestamp="20240423 17:05:00.549" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:04:59.024" endtime="20240423 17:05:00.554"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:59.024" endtime="20240423 17:05:00.554"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:05:02.444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-759.png"&gt;&lt;img src="selenium-screenshot-759.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240423 17:05:02.449" level="FAIL">Page should have contained element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']' but did not.</msg>
+<status status="FAIL" starttime="20240423 17:05:00.554" endtime="20240423 17:05:02.449"/>
+</kw>
+<msg timestamp="20240423 17:05:02.449" level="INFO">${Reload} = False</msg>
+<status status="PASS" starttime="20240423 17:05:00.554" endtime="20240423 17:05:02.449"/>
+</kw>
+<status status="PASS" starttime="20240423 17:05:00.554" endtime="20240423 17:05:02.449"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Reload}</var>
+<arg>Page Should Contain Element</arg>
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240423 17:05:02.703" level="INFO">Current page contains element 'xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//div[@role='tablist']/div[1]/a[@role='tab']'.</msg>
+<status status="PASS" starttime="20240423 17:05:02.454" endtime="20240423 17:05:02.703"/>
+</kw>
+<msg timestamp="20240423 17:05:02.704" level="INFO">${Reload} = True</msg>
+<status status="PASS" starttime="20240423 17:05:02.454" endtime="20240423 17:05:02.704"/>
+</kw>
+<status status="PASS" starttime="20240423 17:05:02.449" endtime="20240423 17:05:02.704"/>
+</iter>
+<status status="PASS" starttime="20240423 17:04:49.045" endtime="20240423 17:05:02.704"/>
+</while>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240423 17:05:03.359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-760.png"&gt;&lt;img src="selenium-screenshot-760.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240423 17:05:02.704" endtime="20240423 17:05:03.359"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:46.528" endtime="20240423 17:05:03.359"/>
+</kw>
+<kw name="Klik Menu Division" library="steps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@id='root']//ul[@role='menu']/li[5]/div[@role='menuitem']/span[@class='uncollapsible']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 17:05:03.364" level="INFO">Clicking element 'xpath=//div[@id='root']//ul[@role='menu']/li[5]/div[@role='menuitem']/span[@class='uncollapsible']'.</msg>
+<status status="PASS" starttime="20240423 17:05:03.364" endtime="20240423 17:05:03.943"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240423 17:05:04.609" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-761.png"&gt;&lt;img src="selenium-screenshot-761.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240423 17:05:03.944" endtime="20240423 17:05:04.609"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[5]/ul[@role='menu']/li[2]//a[@href='/setting/divisions']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240423 17:05:04.614" level="INFO">Clicking element 'xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[5]/ul[@role='menu']/li[2]//a[@href='/setting/divisions']'.</msg>
+<status status="PASS" starttime="20240423 17:05:04.614" endtime="20240423 17:05:05.193"/>
+</kw>
+<status status="PASS" starttime="20240423 17:05:03.364" endtime="20240423 17:05:05.194"/>
+</kw>
+<status status="PASS" starttime="20240423 17:04:02.768" endtime="20240423 17:05:05.203"/>
+</test>
+<status status="PASS" starttime="20240423 17:04:02.259" endtime="20240423 17:05:05.214"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Menu Division">Menu Division</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
