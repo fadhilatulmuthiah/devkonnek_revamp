@@ -145,3 +145,53 @@ Klik Menu Division
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//ul[@role='menu']/li[5]/div[@role='menuitem']/span[@class='uncollapsible']
     Capture Page Screenshot
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[5]/ul[@role='menu']/li[2]//a[@href='/setting/divisions']
+    Capture Page Screenshot
+Klik Create New Division
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div/div[1]/div[1]//button[@type='button']
+    Capture Page Screenshot
+Input Division Name
+    SeleniumLibrary.Input Text    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='form-row']//input[@name='name']    div_qa
+Klik Button Save Divisi
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[2]/p[@class='m-0']
+Klik Button Cancel Divisi
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[1]/p[@class='m-0']
+Klik Button Edit Divisi
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//table[@class='table']/tbody/tr[1]/td[3]/div//i[@class='fa fa-pencil-alt']
+Klik Input Field Division Name
+    SeleniumLibrary.Press Keys    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='form-row']//input[@name='name']    CTRL+a    BACKSPACE
+Klik Button Delete Divisi
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//table[@class='table']/tbody/tr[1]/td[3]/div/button[2]/i
+Klik Button Cancel Delete Divisi
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[1]/p[@class='m-0']
+Klik Button Yes Delete Divisi
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[2]/p[@class='m-0']
+Input Go To Pagination Divisi
+    SeleniumLibrary.Input Text    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='row']/div/div[2]/div[3]/span[@class='text-b-bold']/div//input[@role='spinbutton']    2
+Klik Button Arrow Next Divisi
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='row']/div/div[2]/div[3]/span[@class='text-b-bold']/div//input[@role='spinbutton']
+    Execute JavaScript    window.scrollTo(1184, 970)
+
+#Service level
+Klik Menu Service Level
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//ul[@role='menu']/li[5]/div[@role='menuitem']/span[@class='uncollapsible']
+    Capture Page Screenshot
+    Execute JavaScript    window.scrollTo(119, 771)
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[5]/ul[@role='menu']/li[9]//a[@href='/setting/ssl']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form/div[1]//button[@class='btn btn-apply btn-lg ml-4']
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div[@class='row']/div/div/div[1]//button[@type='button']/span[.='Change Password']
+    END
+    Capture Page Screenshot
+Klik Button Edit Service Level
+    Execute JavaScript    window.scrollTo(731, -200)
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form/div[1]//button[@class='btn btn-apply btn-lg ml-4']
+Klik Button Dropdown Start Point 
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form//div[@name='sla_from']//span[@title='Queue Time']
+    SeleniumLibrary.Press Keys        xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form//div[@name='sla_from']//span[@title='Queue Time']    RETURN
+Klik Button Dropdown End Point
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form//div[@name='sla_to']//span[@title='Assign Time']
+    SeleniumLibrary.Press Keys    xpath= xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form//div[@name='sla_to']//span[@title='Assign Time']    RETURN
+Input Start Time Thresold
+    SeleniumLibrary.Press Keys    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form//div[@class='row']/div[1]/input[@name='minutes_threshold']    CTRL+a    BACKSPACE    5
+Klik Button Save Service Level
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form/div[1]//button[@class='btn btn-apply btn-lg ml-4']
