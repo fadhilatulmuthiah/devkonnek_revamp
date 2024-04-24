@@ -203,3 +203,5 @@ Klik Menu Agent
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/div[@role='menuitem']/span[@class='uncollapsible']
 Klik Sub Menu Agent - Status
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[1]//a[@href='/setting/availability_agent']
+Input Pencarian Agent Status
+    SeleniumLibrary.Input Text    xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/div/span/input    text
