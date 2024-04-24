@@ -195,3 +195,11 @@ Input Start Time Thresold
     SeleniumLibrary.Press Keys    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form//div[@class='row']/div[1]/input[@name='minutes_threshold']    CTRL+a    BACKSPACE    5
 Klik Button Save Service Level
     SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form/div[1]//button[@class='btn btn-apply btn-lg ml-4']
+Klik Button Cancel Service Level
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main/div/div[@class='row']/div/div//form/div[1]//button[@class='btn btn-cancel btn-lg ml-4']
+
+#Menu Agent - Status
+Klik Menu Agent
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/div[@role='menuitem']/span[@class='uncollapsible']
+Klik Sub Menu Agent - Status
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[1]//a[@href='/setting/availability_agent']
