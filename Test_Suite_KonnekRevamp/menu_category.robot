@@ -38,7 +38,7 @@ TC_Edit Category
     Klik Settings Category
     Klik Button Edit Category
     Klik Button Save Edit Category
-    #Close Browser
+    Close Browser
 TC_Cancel Edit Category
     Open browser Staging
     Input Company ID, Email, Password
