@@ -201,7 +201,118 @@ Klik Button Cancel Service Level
 #Menu Agent - Status
 Klik Menu Agent
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/div[@role='menuitem']/span[@class='uncollapsible']
+    Capture Page Screenshot
 Klik Sub Menu Agent - Status
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[1]//a[@href='/setting/availability_agent']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/div/span/input
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/div/span/input
+    END
+    Capture Page Screenshot
 Input Pencarian Agent Status
-    SeleniumLibrary.Input Text    xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/div/span/input    text
+    SeleniumLibrary.Input Text    xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/div/span/input    Agent Pras
+Klik Button Filtering Agent Status 
+    SeleniumLibrary.Click Element    xpath=//*[@id="yield"]/section/section/main/div/div[2]/div/div[1]/div/button
+Klik Checkbox Status - Select All
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='custom-checkbox-wrapper']/label[1]/span[@class='ant-checkbox ant-checkbox-checked']/input[@class='ant-checkbox-input']
+Klik Button Search Filtering Agent Status
+    SeleniumLibrary.Click Element    xpath=//body/div[@role='dialog']/div[@role='document']//button[.='Search']
+Klik Button Reset Filtering Agent Status
+    SeleniumLibrary.Click Element    xpath=//body/div[@role='dialog']/div[@role='document']//button[@class='btn btn-cancel btn-md px-4']
+Klik Button Arrow Pagination Agent Status
+    Execute JavaScript    window.scrollTo(822, 970)
+    SeleniumLibrary.Click Element    xpath=//div[@id='yield']/section[@class='ant-layout']/section//ul[@class='ant-pagination']/li[@class='ant-pagination-next']/button[@class='ant-pagination-item-link']
+
+#Menu Agent - Performance
+Klik Sub Menu Agent - Performance
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[2]//a[@href='/setting/performance']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/span/input
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/span/input
+    END
+    Capture Page Screenshot
+Klik Button 30 Days Agent - Performance
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='d-flex']/button[2]/p[@class='mx-3 my-1']
+Klik Button 7 Days Agent - Performance 
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='d-flex']/button[1]/p[@class='mx-3 my-1']
+Klik Start Date Agent - Performance 
+    ${random_number2}    Evaluate    random.randint(1, 15)
+    SeleniumLibrary.Press Keys    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='d-flex']/div/div[1]//input    CTRL+a    ${random_number2}    RETURN
+Klik To Date Agent - Performance 
+    ${random_number2}    Evaluate    random.randint(16, 30)
+    SeleniumLibrary.Press Keys    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div[@class='wrapper-card-dashboard']//div[@class='d-flex']/div/div[2]/div[@class='react-datepicker-wrapper']/div[@class='react-datepicker__input-container']/input    CTRL+a    ${random_number2}    RETURN
+Klik Button Go Agent - Performance 
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//p[@class='m-0']
+Input Pencarian Agent - Performance
+    SeleniumLibrary.Input Text    xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/span/input    agent_stgrabil
+
+# Menu Agent - History - History
+Klik Sub Menu Agent - History 
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[3]//a[@href='/setting/history']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/span/input
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/span/input
+    END
+Klik Button 30 Days Agent - History
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='d-flex']/button[3]/p[@class='mx-3 my-1']
+Klik Button 7 Days Agent - History
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='d-flex']/button[2]/p[@class='mx-3 my-1']
+Input Pencarian Agent - History
+    SeleniumLibrary.Input Text    xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='table-container-custom']/div[1]/span/input    Agent Vickri
+Klik Button Filtering Agent - History
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//p[@class='ml-2 my-1']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//body/div[@role='dialog']/div[@role='document']//button[.='Search']
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=//body/div[@role='dialog']/div[@role='document']//button[.='Search']
+    END
+Klik Button Start Date Filter Preference Agent - History
+    ${random_number2}    Evaluate    random.randint(1, 15)
+    SeleniumLibrary.Press Keys    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div[@class='row']/div[@class='col']/div[@class='row']/div[1]/div/div[@class='react-datepicker-wrapper']/div[@class='react-datepicker__input-container']/input    CTRL+a   ${random_number2}    RETURN 
+Klik Button To Date Filter Preference Agent - History
+    ${random_number2}    Evaluate    random.randint(16, 30)
+    SeleniumLibrary.Press Keys    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div[@class='row']/div[@class='col']/div[@class='row']/div[3]/div/div[@class='react-datepicker-wrapper']/div[@class='react-datepicker__input-container']/input
+    ...    CTRL+a   ${random_number2}    RETURN 
+Klik Button Dropdown Agent Filter Preference 
+    SeleniumLibrary.Press Keys    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div[@class='row']/div[@class='col-lg-4 col-md-4 col-sm-4']/div/div[@class='ant-select-selector']/span[@title='All']    RETURN
+Klik Button Search Filter Preference Agent - History
+    SeleniumLibrary.Click Element    xpath=//body/div[@role='dialog']/div[@role='document']//button[.='Search']
+
+#Menu Settings - Category
+Klik Settings Category
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[5]/div[@role='menuitem']/span[@class='uncollapsible']
+    Capture Page Screenshot
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div/div[1]/div[1]/div/span/input
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div/div[1]/div[1]/div/span/input
+    END
+    #Category
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[5]/ul[@role='menu']/li[4]//a[@href='/setting/category']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//table[@class='table']/tbody/tr[1]/td[4]/div//i[@class='fa fa-pencil-alt']
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//table[@class='table']/tbody/tr[1]/td[4]/div//i[@class='fa fa-pencil-alt']
+    END
+Input Pencarian Category
+    SeleniumLibrary.Input Text    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div/div[1]/div[1]/div/span/input    Complaint
+Klik Button Create New Category
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div/div[1]/div[1]//button[@type='button']/span[.='+ Create New']
+Input Name Category 
+    ${random_number2}    Evaluate    random.randint(3, 3000)
+    SeleniumLibrary.Input Text    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='form-group row']//input[@name='name']    cat_${random_number2} 
+Input Description category
+    ${random_number2}
+    SeleniumLibrary.Input Text    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='form-group row']//textarea[@name='description']  
+    ...    ${text_desc_category}${random_number2}
+Klik Button Save Category
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[2]/p[@class='m-0']
+Klik Button Cancel Category
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[1]/p[@class='m-0']
+Klik Button Edit Category
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//table[@class='table']/tbody/tr[1]/td[4]/div//i[@class='fa fa-pencil-alt']
+    SeleniumLibrary.Press Keys    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='form-group row']//input[@name='name']    CTRL+a    BACKSPACE    Complaint.
+    ${random_number2}    Evaluate    random.randint(3, 3000)
+    SeleniumLibrary.Press Keys    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']//div[@class='form-group row']//textarea[@name='description']  
+    ...    ${text_desc_category}${random_number2}
+Klik Button Save Edit Category
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[2]/p[@class='m-0']
+Klik Button Cancel Edit Category
+    SeleniumLibrary.Click Element    xpath=/html/body/div[@role='dialog']/div[@role='document']/div[@class='modal-content']/div/div[2]/div/div[3]/button[1]/p[@class='m-0']
