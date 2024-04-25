@@ -19,3 +19,6 @@ ${company_id_blank}  ${EMPTY}
 ${email_blank}       ${EMPTY}
 ${password_blank}    ${EMPTY}
 ${company_id_blank}  ${EMPTY}
+
+#Settings - Category
+${text_description_category}    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

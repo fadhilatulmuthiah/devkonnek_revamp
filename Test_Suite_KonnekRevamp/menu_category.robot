@@ -16,7 +16,7 @@ TC_Create Category
     Klik Settings Category
     Input Pencarian Category
     Klik Button Create New Category
-    Input Name Category 
+    Input Name Category
     Input Description category
     Klik Button Save Category
     #Close Browser
@@ -38,7 +38,7 @@ TC_Edit Category
     Klik Settings Category
     Klik Button Edit Category
     Klik Button Save Edit Category
-    #Close Browser
+    Close Browser
 TC_Cancel Edit Category
     Open browser Staging
     Input Company ID, Email, Password
